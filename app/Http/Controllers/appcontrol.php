@@ -10,7 +10,7 @@ class appcontrol extends Controller
 {
     function index()
     {
-        $imgUrl = "http://localhost/Resources";
+        $imgUrl = "http://inilahkepri.id/resources/Artikel_Thumbnail";
         $headline = mdBerita::with(['kategori'])->orderBy("tgl_publish", "DESC")->where('headline', 'true')->limit(4)->get();
         $videos = mdVideos::orderBy('created_at', 'DESC')->limit(8)->get();
         $berita = mdBerita::orderBy("tgl_publish", "DESC")->limit(10)->get();
@@ -23,7 +23,7 @@ class appcontrol extends Controller
 
     function detail(Request $r, $id)
     {
-        $imgUrl = "http://localhost/Resources";
+        $imgUrl = "http://inilahkepri.id/resources/Artikel_Thumbnail";
         $berita = mdBerita::where("id_berita", $id)->first();
         $related = mdBerita::orderBy("tgl_publish", "DESC")->limit(10)->get();
         return view('porto/berita/detail', compact('berita', 'imgUrl', 'related'));
