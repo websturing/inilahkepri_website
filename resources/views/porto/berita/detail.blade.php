@@ -6,6 +6,8 @@
 <meta property="og:title" content="{{$berita->judul}}" />
 <meta property="og:description" content="{{$berita->beritaIsi}}" />
 <meta property="og:image" content="{{$imgUrl}}/{{$berita->folderGambar}}" />
+<meta property="og:image:width" content="620" />
+<meta property="og:image:height" content="541" />
 @endsection
 @section('content')
 <?php
