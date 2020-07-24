@@ -1,11 +1,11 @@
 
 <?php $__env->startSection('navbar_class','navbar-dark'); ?>
 <?php $__env->startSection('meta'); ?>
-<meta property="og:url" content="<?php echo e(url('/berita')); ?>/<?php echo e($berita->id_berita); ?>/<?php echo e($berita->seo); ?>" />
+<meta property="og:url" content="<?php echo e(url('/videos')); ?>/<?php echo e($berita->video_id); ?>/<?php echo e($berita->seo); ?>" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="<?php echo e($berita->judul); ?>" />
-<meta property="og:description" content="<?php echo e($berita->beritaIsi); ?>" />
-<meta property="og:image" content="<?php echo e($imgUrl); ?>/<?php echo e($berita->folderGambar); ?>" />
+<meta property="og:title" content="<?php echo e($berita->title); ?>" />
+<meta property="og:description" content="<?php echo e($berita->description); ?>" />
+<meta property="og:image" content="<?php echo e($berita->thumb); ?>" />
 <meta property="og:image:width" content="620" />
 <meta property="og:image:height" content="541" />
 <?php $__env->stopSection(); ?>
@@ -46,10 +46,12 @@
                     <h2 class="font-weight-bold text-5 line-height-2 appear-animation"
                         data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500"><span
                             class="text-5"><?php echo e($berita->title); ?></span></h2>
+                    <hr>
                     <p><?php echo e($berita->publishedAt); ?></p>
                     <p><?php echo e($berita->description); ?></p>
                 </div>
             </div>
+            <hr />
             <div class="row">
 
                 <?php $__currentLoopData = $related->slice(0,9); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $b): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

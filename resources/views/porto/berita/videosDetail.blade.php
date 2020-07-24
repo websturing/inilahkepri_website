@@ -46,10 +46,12 @@
                     <h2 class="font-weight-bold text-5 line-height-2 appear-animation"
                         data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500"><span
                             class="text-5">{{$berita->title}}</span></h2>
+                    <hr>
                     <p>{{$berita->publishedAt}}</p>
                     <p>{{$berita->description }}</p>
                 </div>
             </div>
+            <hr />
             <div class="row">
 
                 @foreach($related->slice(0,9) as $index => $b)
