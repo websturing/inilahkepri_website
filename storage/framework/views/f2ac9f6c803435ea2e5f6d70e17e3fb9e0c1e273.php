@@ -244,68 +244,8 @@
                     <div class="col-lg-3 order-lg-3">
                         <aside class="sidebar pb-4" data-plugin-sticky
                             data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
-                            <h3 class="font-weight-bold text-3 mt-4 mt-md-0">TRENDING</h3>
-
-                            <div class="owl-carousel owl-theme"
-                                data-plugin-options="{'items': 1, 'margin': 10, 'loop': true, 'nav': false, 'dots': false, 'autoplay': true, 'autoplayTimeout': 5000}">
-                                <?php $__currentLoopData = $populer; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <div>
-                                    <a href="<?php echo e(url('berita')); ?>/<?php echo e($p->seo); ?>/<?php echo e($p->id_berita); ?>">
-                                        <article>
-                                            <div
-                                                class="thumb-info thumb-info-no-borders thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-show-more thumb-info-no-zoom border-radius-0">
-                                                <div class="thumb-info-wrapper thumb-info-wrapper-opacity-6">
-                                                    <img src="<?php echo e($imgUrl); ?>/<?php echo e($p->folderGambar); ?>" class="img-fluid"
-                                                        alt="Main Reasons To Stop Texting And Driving">
-                                                    <div class="thumb-info-title bg-transparent p-4">
-                                                        <div class="thumb-info-type bg-color-primary px-2 mb-1">
-                                                            <?php echo e($p->kategori->nama_kategori); ?></div>
-                                                        <div class="thumb-info-inner mt-1">
-                                                            <h2
-                                                                class="text-color-light line-height-2 text-4 font-weight-bold mb-0">
-                                                                <?php echo e($p->judul); ?>g</h2>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </a>
-                                </div>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-                            </div>
-                            <h5 class="font-weight-bold">Latest from Twitter</h5>
-                            <div id="tweet" class="twitter mb-4" data-plugin-tweets
-                                data-plugin-options="{'username': 'oklerthemes', 'count': 2}">
-                                <p>Please wait...</p>
-                            </div>
-                            <h5 class="font-weight-bold pt-4">Photos from Instagram</h5>
-                            <div id="instafeedNoMargins" class="mb-4 pb-1"></div>
-                            <h5 class="font-weight-bold pt-4 mb-2">Tags</h5>
-                            <div class="mb-3 pb-1">
-                                <a href="#"><span
-                                        class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">design</span></a>
-                                <a href="#"><span
-                                        class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">brands</span></a>
-                                <a href="#"><span
-                                        class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">video</span></a>
-                                <a href="#"><span
-                                        class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">business</span></a>
-                                <a href="#"><span
-                                        class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">travel</span></a>
-                            </div>
-                            <a href="http://themeforest.net/item/porto-responsive-html5-template/4106987"
-                                target="_blank" class="my-4 pt-3 d-block">
-                                <img alt="Porto" class="img-fluid" src="img/blog/blog-ad-1-medium.jpg" />
-                            </a>
-                            <h5 class="font-weight-bold pt-4">Find us on Facebook</h5>
-                            <div class="fb-page" data-href="https://www.facebook.com/OklerThemes/"
-                                data-small-header="true" data-adapt-container-width="true" data-hide-cover="true"
-                                data-show-facepile="true">
-                                <blockquote cite="https://www.facebook.com/OklerThemes/" class="fb-xfbml-parse-ignore">
-                                    <a href="https://www.facebook.com/OklerThemes/">Okler Themes</a>
-                                </blockquote>
-                            </div>
+                            <img src="<?php echo e($iklanUrl); ?>/bpbatam1.jpg" class="img-fluid">
+                            <img src="<?php echo e($iklanUrl); ?>/bpbatam2.jpg" class="img-fluid">
                         </aside>
                     </div>
                     <div class="col-lg-8 order-lg-2">
