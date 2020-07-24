@@ -25,7 +25,7 @@ class appcontrol extends Controller
     function detail(Request $r, $id)
     {
         $iklanUrl = "http://inilahkepri.id/public/iklan";
-        $imgUrl = "http://inilahkepri.id/rgitesources/Artikel_Thumbnail";
+        $imgUrl = "http://inilahkepri.id/resources/Artikel_Thumbnail";
         $berita = mdBerita::where("id_berita", $id)->first();
         $related = mdBerita::orderBy("tgl_publish", "DESC")->limit(10)->get();
         return view('porto/berita/detail', compact('berita', 'imgUrl', 'related', 'iklanUrl'));
