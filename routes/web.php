@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'appcontrol@index');
 Route::get('/berita/{id}/{judul}', 'appcontrol@detail');
 Route::get('/berita/data', 'appcontrol@detail');
+Route::get('/videos/{id}/{judul}', 'appcontrol@videosDetail');

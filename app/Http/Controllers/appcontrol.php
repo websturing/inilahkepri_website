@@ -30,4 +30,13 @@ class appcontrol extends Controller
         $related = mdBerita::orderBy("tgl_publish", "DESC")->limit(10)->get();
         return view('porto/berita/detail', compact('berita', 'imgUrl', 'related', 'iklanUrl'));
     }
+
+    function videosDetail($id)
+    {
+        $iklanUrl = "http://inilahkepri.id/public/iklan";
+        $imgUrl = "http://inilahkepri.id/resources/Artikel_Thumbnail";
+        $berita = mdVideos::where("video_id", $id)->first();
+        $related = mdVideos::orderBy("publishedAt", "DESC")->limit(10)->get();
+        return view('porto/berita/videosDetail', compact('berita', 'imgUrl', 'related', 'iklanUrl'));
+    }
 }

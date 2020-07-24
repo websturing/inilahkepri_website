@@ -206,7 +206,7 @@
                             <div class="col-lg-5 mb-5">
                                 <h5 class="text-light font-weight-bold mb-10 text-10 appear-animation"
                                     data-appear-animation="fadeInUpShorter">
-                                    INIALH CHANNEL</h5>
+                                    INILAH CHANNEL</h5>
                                 <h5 class="font-weight-bold text-5 line-height-2 mb-3 mt-5 appear-animation"
                                     data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400"
                                     data-appear-animation-duration="750"><?php echo e($h->judul); ?><span class="appear-animation"
