@@ -137,15 +137,18 @@
                                 <h5 class="text-primary font-weight-bold mb-1 appear-animation"
                                     data-appear-animation="fadeInUpShorter">
                                     <?php echo e($h->kategori->nama_kategori); ?></h5>
-                                <h5 class="font-weight-bold text-5 line-height-2 mb-3 appear-animation"
-                                    data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400"
-                                    data-appear-animation-duration="750"><?php echo e($h->judul); ?><span class="appear-animation"
-                                        data-appear-animation="fadeInRightShorter" data-appear-animation-delay="600"
-                                        data-appear-animation-duration="800"></span>
-                                </h5>
+                                <a href="<?php echo e(url('berita')); ?>/<?php echo e($h->id_berita); ?>/<?php echo e($h->seo); ?>">
+                                    <h5 class="font-weight-bold text-5 line-height-2 mb-3 appear-animation"
+                                        data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400"
+                                        data-appear-animation-duration="750"><?php echo e($h->judul); ?><span class="appear-animation"
+                                            data-appear-animation="fadeInRightShorter" data-appear-animation-delay="600"
+                                            data-appear-animation-duration="800"></span>
+                                    </h5>
+                                </a>
                                 <p class="custom-font-size-1 appear-animation" data-appear-animation="fadeInUpShorter"
                                     data-appear-animation-delay="900" data-appear-animation-duration="750">
-                                    <?php echo e($h->beritaIsi); ?> <a href="#intro" data-hash data-hash-offset="120"
+                                    <?php echo e($h->beritaIsi); ?> <a href="<?php echo e(url('berita')); ?>/<?php echo e($h->id_berita); ?>/<?php echo e($h->seo); ?>"
+                                        data-hash data-hash-offset="120"
                                         class="text-color-light font-weight-semibold text-1 d-block">Selanjutnya <i
                                             class="fa fa-long-arrow-alt-right ml-1"></i></a></p>
 

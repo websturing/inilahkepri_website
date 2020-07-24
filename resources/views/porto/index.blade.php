@@ -137,15 +137,18 @@
                                 <h5 class="text-primary font-weight-bold mb-1 appear-animation"
                                     data-appear-animation="fadeInUpShorter">
                                     {{$h->kategori->nama_kategori}}</h5>
-                                <h5 class="font-weight-bold text-5 line-height-2 mb-3 appear-animation"
-                                    data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400"
-                                    data-appear-animation-duration="750">{{$h->judul}}<span class="appear-animation"
-                                        data-appear-animation="fadeInRightShorter" data-appear-animation-delay="600"
-                                        data-appear-animation-duration="800"></span>
-                                </h5>
+                                <a href="{{url('berita')}}/{{$h->id_berita}}/{{$h->seo}}">
+                                    <h5 class="font-weight-bold text-5 line-height-2 mb-3 appear-animation"
+                                        data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400"
+                                        data-appear-animation-duration="750">{{$h->judul}}<span class="appear-animation"
+                                            data-appear-animation="fadeInRightShorter" data-appear-animation-delay="600"
+                                            data-appear-animation-duration="800"></span>
+                                    </h5>
+                                </a>
                                 <p class="custom-font-size-1 appear-animation" data-appear-animation="fadeInUpShorter"
                                     data-appear-animation-delay="900" data-appear-animation-duration="750">
-                                    {{$h->beritaIsi}} <a href="#intro" data-hash data-hash-offset="120"
+                                    {{$h->beritaIsi}} <a href="{{url('berita')}}/{{$h->id_berita}}/{{$h->seo}}"
+                                        data-hash data-hash-offset="120"
                                         class="text-color-light font-weight-semibold text-1 d-block">Selanjutnya <i
                                             class="fa fa-long-arrow-alt-right ml-1"></i></a></p>
 
@@ -203,7 +206,7 @@
                             <div class="col-lg-5 mb-5">
                                 <h5 class="text-light font-weight-bold mb-10 text-10 appear-animation"
                                     data-appear-animation="fadeInUpShorter">
-                                    INIALH CHANNEL</h5>
+                                    INILAH CHANNEL</h5>
                                 <h5 class="font-weight-bold text-5 line-height-2 mb-3 mt-5 appear-animation"
                                     data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400"
                                     data-appear-animation-duration="750">{{$h->judul}}<span class="appear-animation"
