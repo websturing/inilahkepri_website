@@ -201,7 +201,7 @@
                 <div class="container">
                     <div class="owl-carousel owl-theme nav-style-1 mb-0"
                         data-plugin-options="{'items' : 1,'margin': 25, 'loop': true, 'nav': false, 'dots': false, 'autoplay': true, 'autoplayTimeout': 3000}">
-                        <?php $__currentLoopData = $headline; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $h): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php $__currentLoopData = $videos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $h): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="row align-items-center pt-3">
                             <div class="col-lg-5 mb-5">
                                 <h5 class="text-light font-weight-bold mb-10 text-10 appear-animation"
@@ -209,13 +209,13 @@
                                     INILAH CHANNEL</h5>
                                 <h5 class="font-weight-bold text-5 line-height-2 mb-3 mt-5 appear-animation"
                                     data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400"
-                                    data-appear-animation-duration="750"><?php echo e($h->judul); ?><span class="appear-animation"
+                                    data-appear-animation-duration="750"><?php echo e($h->title); ?><span class="appear-animation"
                                         data-appear-animation="fadeInRightShorter" data-appear-animation-delay="600"
                                         data-appear-animation-duration="800"></span>
                                 </h5>
                                 <p class="custom-font-size-1 appear-animation" data-appear-animation="fadeInUpShorter"
                                     data-appear-animation-delay="900" data-appear-animation-duration="750">
-                                    <?php echo e($h->beritaIsi); ?> <a href="#intro" data-hash data-hash-offset="120"
+                                    <?php echo e($h->description); ?> <a href="#intro" data-hash data-hash-offset="120"
                                         class="text-color-light font-weight-semibold text-1 d-block">Selanjutnya <i
                                             class="fa fa-long-arrow-alt-right ml-1"></i></a></p>
 
@@ -232,7 +232,7 @@
                             <div class="col-lg-6 offset-lg-1 mb-5 appear-animation" data-appear-animation="fadeIn"
                                 data-appear-animation-delay="1200" data-appear-animation-duration="750">
                                 <div class="border-width-10 border-color-light clearfix border border-radius">
-                                    <img src="<?php echo e($imgUrl); ?>/<?php echo e($h->folderGambar); ?>" class="img-fluid" alt="">
+                                    <img src="<?php echo e($h->thumbnails); ?>" class="img-fluid" alt="">
                                 </div>
                             </div>
                         </div>
@@ -262,13 +262,13 @@
                         <div class="row pb-1">
 
                             <div class="col-lg-6">
-                                <?php $__currentLoopData = $videos->slice(1,3); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $podcast->slice(1,3); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
                                 <article
                                     class="thumb-info thumb-info-side-image thumb-info-no-zoom bg-transparent border-radius-0 pb-4 mb-2">
                                     <div class="row align-items-center pb-1">
                                         <div class="col-sm-4">
-                                            <a href="<?php echo e(url('/videos/')); ?>/<?php echo e($p->id_berita); ?>/<?php echo e($p->seo); ?>">
+                                            <a href="<?php echo e(url('/videos/')); ?>/<?php echo e($p->video_id); ?>/<?php echo e($p->seo); ?>">
                                                 <img src="<?php echo e($p->thumbnails); ?>" class="img-fluid border-radius-0"
                                                     alt="<?php echo e($p->title); ?>">
                                             </a>
@@ -294,12 +294,12 @@
                             </div>
 
                             <div class="col-lg-6 mb-4 pb-1">
-                                <?php $__currentLoopData = $videos->slice(0,1); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $podcast->slice(0,1); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <article
                                     class="thumb-info thumb-info-side-image thumb-info-no-zoom bg-transparent border-radius-0 pb-2 mb-2">
                                     <div class="row">
                                         <div class="col">
-                                            <a href="<?php echo e(url('/berita/')); ?>/<?php echo e($p->id_berita); ?>/<?php echo e($p->seo); ?>">
+                                            <a href="<?php echo e(url('/videos/')); ?>/<?php echo e($p->video_id); ?>/<?php echo e($p->seo); ?>">
                                                 <img src="<?php echo e($p->thumbnails); ?>" class="img-fluid border-radius-0"
                                                     alt="<?php echo e($p->title); ?>">
                                             </a>
@@ -309,12 +309,12 @@
                                         <div class="col">
                                             <div class="thumb-info-caption-text">
                                                 <div class="d-inline-block text-default text-1 mt-2 float-none">
-                                                    <a href="<?php echo e(url('/vidoes/')); ?>/<?php echo e($p->id_berita); ?>/<?php echo e($p->seo); ?>"
+                                                    <a href="<?php echo e(url('/vidoes/')); ?>/<?php echo e($p->video_id); ?>/<?php echo e($p->seo); ?>"
                                                         class="text-decoration-none text-color-default"><?php echo e($p->publishedAt); ?></a>
                                                 </div>
                                                 <h4
                                                     class="d-block line-height-2 text-4 text-dark font-weight-bold mb-0">
-                                                    <a href="<?php echo e(url('/videos/')); ?>/<?php echo e($p->id_berita); ?>/<?php echo e($p->seo); ?>"
+                                                    <a href="<?php echo e(url('/videos/')); ?>/<?php echo e($p->video_id); ?>/<?php echo e($p->seo); ?>"
                                                         class="text-decoration-none text-color-dark"><?php echo e($p->title); ?></a>
                                                 </h4>
                                             </div>
