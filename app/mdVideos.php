@@ -30,9 +30,9 @@ class mdVideos extends Model
     function getthumbAttribute()
     {
         if ($this->kategori == 'inilahchannel') {
-            return "http://inilahkepri.id/resources/podcast/" . $this->thumbnails;
+            return $this->thumbnails;
         } else {
-            return "http://inilahkepri.id/resources/podcast/" . $this->thumbnails;
+            return $this->thumbnails;
         }
     }
     function getseoAttribute()
