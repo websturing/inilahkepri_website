@@ -75,6 +75,21 @@
             cursor: pointer;
         }
 
+        .height {
+            height: 315px !important;
+        }
+
+        @media screen and (max-width: 600px) {
+            #videoBox.out {
+                width: 250px;
+                right: 10px;
+            }
+
+            .height {
+                height: auto !important;
+            }
+        }
+
     </style>
 </head>
 
@@ -88,7 +103,7 @@
                         <div class="header-column header-column-border-right flex-grow-0">
                             <div class="header-row pr-4">
                                 <div class="header-logo">
-                                    <a href="index.html">
+                                    <a href="{{url('/')}}">
                                         <img alt="Porto" width="100" height="48" data-sticky-width="82"
                                             data-sticky-height="40" src="{{url('public/porto/img/logo1.png')}}">
                                     </a>
@@ -200,7 +215,7 @@
 
                 <div id="videoBox" class="box out" style="color:white">
                     <span class="font-weight-bold closeMini">X</span>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nn2Z_YQImBg" frameborder="0"
+                    <iframe width="100%" class="height" src="https://www.youtube.com/embed/nn2Z_YQImBg" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>

@@ -75,6 +75,21 @@
             cursor: pointer;
         }
 
+        .height {
+            height: 315px !important;
+        }
+
+        @media  screen and (max-width: 600px) {
+            #videoBox.out {
+                width: 250px;
+                right: 10px;
+            }
+
+            .height {
+                height: auto !important;
+            }
+        }
+
     </style>
 </head>
 
@@ -200,7 +215,7 @@
 
                 <div id="videoBox" class="box out" style="color:white">
                     <span class="font-weight-bold closeMini">X</span>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nn2Z_YQImBg" frameborder="0"
+                    <iframe width="100%" class="height" src="https://www.youtube.com/embed/nn2Z_YQImBg" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
