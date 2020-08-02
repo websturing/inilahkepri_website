@@ -11,18 +11,27 @@ class mdBerita extends Model
 {
     protected $table = "berita";
     protected $primaryKey = "id_berta";
+
     protected $appends = [
         'Folder',
         'seo',
         'LinkTo',
         'folderGambar',
         'beritaIsi',
-        'isiNews'
+        'isiNews',
+        'publishTgl'
     ];
+
+
 
     function getFolderAttribute()
     {
         $crypt = date("Ymd", strtotime($this->tgl_publish));
+        return $crypt;
+    }
+    function getpublishTglAttribute()
+    {
+        $crypt = date("d-m-Y", strtotime($this->tgl_publish));
         return $crypt;
     }
 

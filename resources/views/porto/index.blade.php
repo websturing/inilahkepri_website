@@ -49,6 +49,33 @@
 
     <!-- Head Libs -->
     <script src="{{url('public/porto/vendor/modernizr/modernizr.min.js')}}"></script>
+    <script src="//code.jquery.com/jquery-3.2.0.slim.min.js"></script>
+    <style>
+        #videoBox.out {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 570px;
+            z-index: 999;
+            animation: an 0.5s;
+        }
+
+        #videoBox.in {
+            animation: ac 1s;
+        }
+
+        .closeMini {
+            background-color: red;
+            text-align: center;
+            width: 30px;
+            padding: 5px;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -88,11 +115,6 @@
                                                 <li class="dropdown">
                                                     <a class="dropdown-item" href="{{url('/inilahchannel')}}">
                                                         INILAH CHANNEL
-                                                    </a>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a class="dropdown-item" href="{{url('/inilahparlemen')}}">
-                                                        INILAH PARLEMEN
                                                     </a>
                                                 </li>
                                             </ul>
@@ -172,6 +194,15 @@
 
                         @endforeach
                     </div>
+                </div>
+            </section>
+            <section>
+
+                <div id="videoBox" class="box out" style="color:white">
+                    <span class="font-weight-bold closeMini">X</span>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nn2Z_YQImBg" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </section>
             <section class="section border-0 m-0">
@@ -624,6 +655,16 @@
 
     <!-- Theme Initialization Files -->
     <script src="{{url('public/porto/js/theme.init.js')}}"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).on("click", ".closeMini", function () {
+
+                $("#videoBox").hide();
+
+            })
+        })
+
+    </script>
 </body>
 
 </html>

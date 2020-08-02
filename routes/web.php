@@ -17,3 +17,5 @@ Route::get('/', 'appcontrol@index');
 Route::get('/berita/{id}/{judul}', 'appcontrol@detail');
 Route::get('/berita/data', 'appcontrol@detail');
 Route::get('/videos/{id}/{judul}', 'appcontrol@videosDetail');
+Route::get('/inilahnews', 'appcontrol@inilahnews');
+Route::get('/inilahchannel', 'appcontrol@inilahchannel');

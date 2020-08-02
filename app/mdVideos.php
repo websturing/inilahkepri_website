@@ -17,6 +17,9 @@ class mdVideos extends Model
         'folderGambar',
         'thumb'
     ];
+    protected $casts = [
+        'publishedAt' => 'datetime:d-m-Y',
+    ];
 
     function gettitleLowerAttribute()
     {

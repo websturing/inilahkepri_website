@@ -40,4 +40,19 @@ class appcontrol extends Controller
         $related = mdVideos::orderBy("publishedAt", "DESC")->limit(10)->get();
         return view('porto/berita/videosDetail', compact('berita', 'imgUrl', 'related', 'iklanUrl'));
     }
+
+    function inilahnews()
+    {
+        $imgUrl = "http://inilahkepri.id/resources/Artikel_Thumbnail";
+        $berita = mdBerita::orderBy("tgl_publish", "DESC")->orderBy("jam", "DESC")->limit(300)->get();
+        return view('porto/berita/inilahnews', compact('berita', 'imgUrl'));
+    }
+
+    function inilahchannel()
+    {
+        $iklanUrl = "http://inilahkepri.id/public/iklan";
+        $imgUrl = "http://inilahkepri.id/resources/Artikel_Thumbnail";
+        $related = mdVideos::orderBy("publishedAt", "DESC")->get();
+        return view('porto/berita/inilahchannel', compact('berita', 'imgUrl', 'related', 'iklanUrl'));
+    }
 }
