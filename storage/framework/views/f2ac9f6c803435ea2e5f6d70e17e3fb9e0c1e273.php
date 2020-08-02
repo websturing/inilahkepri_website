@@ -229,47 +229,60 @@
             </section>
             <section class="section-dark section-with-divider pt-5 m-0" id="section-concept"
                 style="background-image: url('<?php echo e(url('public/images/podcast.jpg')); ?>'); background-size: cover; background-position: center;">
-                <div class="container">
-                    <div class="owl-carousel owl-theme nav-style-1 mb-0"
-                        data-plugin-options="{'items' : 1,'margin': 25, 'loop': true, 'nav': false, 'dots': false, 'autoplay': true, 'autoplayTimeout': 3000}">
-                        <?php $__currentLoopData = $videos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $h): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="row align-items-center pt-3">
-                            <div class="col-lg-5 mb-5">
-                                <h5 class="text-light font-weight-bold mb-10 text-10 appear-animation"
-                                    data-appear-animation="fadeInUpShorter">
-                                    INILAH CHANNEL</h5>
+                <div class="container container-lg">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6 mb-5">
+                            <?php $__currentLoopData = $videos->slice(0,1); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $h): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <h5 class="text-light font-weight-bold mb-10 text-10 appear-animation mb-4"
+                                data-appear-animation="fadeInUpShorter">
+                                INILAH CHANNEL</h5>
+                            <div class="border-width-10 border-color-light clearfix border border-radius">
+                                <img src="<?php echo e($h->thumbnails); ?>" class="img-fluid" alt="" width="100%">
+                            </div>
+                            <a href="<?php echo e(url('videos')); ?>/<?php echo e($h->video_id); ?>/<?php echo e($h->seo); ?>">
                                 <h5 class="font-weight-bold text-5 line-height-2 mb-3 mt-5 appear-animation"
                                     data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400"
                                     data-appear-animation-duration="750"><?php echo e($h->title); ?><span class="appear-animation"
                                         data-appear-animation="fadeInRightShorter" data-appear-animation-delay="600"
                                         data-appear-animation-duration="800"></span>
                                 </h5>
-                                <p class="custom-font-size-1 appear-animation" data-appear-animation="fadeInUpShorter"
-                                    data-appear-animation-delay="900" data-appear-animation-duration="750">
-                                    <?php echo e($h->description); ?> <a href="#intro" data-hash data-hash-offset="120"
-                                        class="text-color-light font-weight-semibold text-1 d-block">Selanjutnya <i
-                                            class="fa fa-long-arrow-alt-right ml-1"></i></a></p>
+                            </a>
+                            <p class="custom-font-size-1 appear-animation" data-appear-animation="fadeInUpShorter"
+                                data-appear-animation-delay="900" data-appear-animation-duration="750">
+                                <?php echo e($h->description); ?> <a href="<?php echo e(url('videos')); ?>/<?php echo e($h->video_id); ?>/<?php echo e($h->seo); ?>" data-hash
+                                    data-hash-offset="120"
+                                    class="text-color-light font-weight-semibold text-1 d-block">Selanjutnya <i
+                                        class="fa fa-long-arrow-alt-right ml-1"></i></a></p>
 
 
-                                <div id="popup-content-1"
-                                    class="dialog dialog-lg zoom-anim-dialog rounded p-3 mfp-hide mfp-close-out">
-                                    <div class="embed-responsive embed-responsive-4by3">
-                                        <video width="100%" height="100%" autoplay muted loop controls>
-                                            <source src="video/presentation.mp4" type="video/mp4">
-                                        </video>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <?php $__currentLoopData = $videos->slice(1,4); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $h): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <div class="col-lg-6  mb-5 appear-animation" data-appear-animation="fadeIn"
+                                    data-appear-animation-duration="750">
+                                    <div class="border-width-10 border-color-light clearfix border border-radius">
+                                        <img src="<?php echo e($h->thumbnails); ?>" class="img-fluid" alt="">
                                     </div>
+                                    <a href="<?php echo e(url('videos')); ?>/<?php echo e($h->video_id); ?>/<?php echo e($h->seo); ?>">
+                                        <h6 class="font-weight-bold text-3 line-height-3 pt-2 appear-animation"
+                                            data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400"
+                                            data-appear-animation-duration="750"><?php echo e($h->title); ?><span
+                                                class="appear-animation" data-appear-animation="fadeInRightShorter"
+                                                data-appear-animation-delay="600"
+                                                data-appear-animation-duration="800"></span>
+                                        </h6>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 offset-lg-1 mb-5 appear-animation" data-appear-animation="fadeIn"
-                                data-appear-animation-delay="1200" data-appear-animation-duration="750">
-                                <div class="border-width-10 border-color-light clearfix border border-radius">
-                                    <img src="<?php echo e($h->thumbnails); ?>" class="img-fluid" alt="">
-                                </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
                             </div>
                         </div>
-
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
+
 
                 </div>
             </section>
